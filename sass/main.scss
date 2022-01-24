@@ -1,0 +1,812 @@
+@import "./variables";
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: unset;
+  font-weight: unset;
+  margin: 0;
+  padding: 0;
+}
+
+.svg-inline--fa.fa-heart.fa-w-16 {
+  background-color: $light-grey;
+  width: 2rem;
+  z-index: 1;
+}
+
+
+
+.bonjour {
+  position: relative;
+  z-index: 6 !important;
+  fill: transparent;
+  stroke-width: 20 !important;
+  stroke: black !important;
+  visibility: visible;
+}
+
+.svg_container {
+  margin-top: -9.5rem;
+  position: relative;
+  background-color: violet;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2rem;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-image: $rose-purple;
+    animation: filltest 3s ease-in forwards;
+    visibility: visible;
+    z-index: 0;
+  }
+}
+
+@keyframes filltest {
+  100% {
+    transform: translateY(-130%) rotate(550deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  overflow-x: hidden !important;
+}
+
+a {
+  width: 100%;
+  height: fit-content;
+  color: $black;
+  text-decoration: none;
+  border-radius: 1.3rem;
+}
+
+.location {
+  width: 100vw;
+  height: 15vw;
+  background-color: $grey;
+  justify-content: center;
+}
+
+.reservation {
+  width: 100%;
+  background-color: $light-grey;
+  padding: 3rem 3.1rem;
+  gap: 0.5rem;
+}
+
+.reservation_container {
+  animation: visible 3s ease-in forwards;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: none;
+}
+
+#heart-container {
+  min-height: 30px;
+  position: relative;
+  > svg {
+    position: absolute;
+  }
+  .filledsvg {
+    bottom: 30px;
+  }
+}
+
+.fonctionnement {
+  margin: auto;
+  animation: visible 3s ease-in forwards;
+  width: 88% !important;
+  height: fit-content !important;
+  align-items: flex-start !important;
+  padding: 6%;
+  gap: 3vw;
+ max-width: 1280px;
+  & .flex {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100% !important;
+    gap: 10%;
+  }
+
+  &_rectangle {
+    background-color: $light-grey;
+    width: 100%;
+    border-radius: 20px;
+    height: 5rem;
+    max-width: 23.5rem;
+  }
+}
+
+.container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 19rem;
+  bottom: 6.3rem;
+}
+
+.clip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  clip-path: url(#svgPath);
+  
+
+  &:hover {
+    &::before {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: $rose-purple;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.2s linear, opacity 0.2s linear;
+    transform-origin: center 60%;
+  }
+}
+
+.stroke {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: $black;
+
+
+ 
+}
+
+.card {
+  position: relative;
+  width: 100% !important;
+  height: 67vw !important;
+  border-radius: 1.3rem;
+  background-color: $white;
+  box-shadow: 0px 0px 7px 3px $grey-box;
+  max-height: 20rem;
+}
+
+.card_container {
+  justify-self: center;
+  width: 95.002%;
+  height: fit-content;
+  gap: 1.5rem;
+  align-items: flex-start;
+  position: relative;
+  padding: 3rem 2.5%;
+  background-color: $light-grey;
+}
+
+.footer {
+  background-color: $dark-grey;
+  width: 86.349% !important;
+  height: fit-content;
+  align-items: flex-start !important;
+  flex-direction: column !important;
+  padding: 1.5rem 1.6rem 3rem 1.6rem;
+  gap: 0.5rem;
+}
+
+.footer_container {
+  background-color: $dark-grey;
+  width: 100%;
+}
+
+@media all and (max-width: 1280px) {
+  .footer {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .footer {
+    max-width: 1280px;
+  }
+}
+.menu_card {
+  @include menu_card;
+  max-width: 492px;
+  animation: test 1s ease-in forwards;
+
+  &:hover .slidegreen {
+    animation: slidetest 0.5s forwards;
+  }
+
+  &:hover .fas.fa-check-circle {
+    animation: rotation 0.5s forwards;
+    visibility: visible;
+  }
+
+  &1 {
+    @include menu_card;
+    max-width: 492px;
+    animation: test 1.1s ease-in forwards;
+
+    &:hover .slidegreen {
+      animation: slidetest 0.5s forwards;
+    }
+
+    &:hover .fas.fa-check-circle {
+      animation: rotation 0.5s forwards;
+      visibility: visible;
+    }
+  }
+  &2 {
+    @include menu_card;
+    max-width: 492px;
+    animation: test 1.2s ease-in forwards;
+
+    &:hover .slidegreen {
+      animation: slidetest 0.5s forwards;
+    }
+
+    &:hover .fas.fa-check-circle {
+      animation: rotation 0.5s forwards;
+      visibility: visible;
+    }
+  }
+  &3 {
+    @include menu_card;
+    max-width: 492px;
+    animation: test 1.3s ease-in forwards;
+
+    &:hover .slidegreen {
+      animation: slidetest 0.5s forwards;
+    }
+
+    &:hover .fas.fa-check-circle {
+      animation: rotation 0.5s forwards;
+      visibility: visible;
+    }
+  }
+
+  &_provence {
+    margin-top: 1rem;
+    background-color: $white;
+    width: 100%;
+    height: 6rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 3px $grey-box;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 492px;
+
+    &:hover .slidegreen {
+      animation: slidetest 0.5s forwards;
+    }
+
+    &:hover .fas.fa-check-circle {
+      animation: rotation 0.5s forwards;
+      visibility: visible;
+    }
+  }
+}
+
+.menu_container {
+  gap: 1.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+.button {
+  padding: 0rem 1.5rem;
+  border-radius: 2rem;
+  height: 3.5rem;
+  background-image: $rose-purple;
+  border-style: none;
+  color: $white;
+  margin-top: 10vw;
+  box-shadow: 0px 6px 6px 2px $grey-box;
+
+  &:hover {
+    opacity: 80%;
+    box-shadow: 0px 8px 7px 3px $grey-box;
+  }
+}
+
+.fs_smallbold {
+  font-size: $fs_smallbold;
+  font-weight: $fw_smallbold;
+}
+
+.fs_small {
+  font-size: $fs_small;
+}
+.fs_normal {
+  font-size: $fs_normal;
+  font-weight: $fw_normal;
+  @include ellipsis;
+  display: block;
+}
+
+.fs_largebold {
+  font-size: $fs_largebold;
+  font-weight: $fw_largebold;
+}
+
+.fs_center {
+
+  text-align: center;
+}
+
+.fs_reset {
+  font-size: $fs_reset;
+  font-weight: $fw_reset;
+  display: block;
+  width: fit-content;
+}
+
+.mrg_2 {
+  margin-left: 18%;
+}
+
+.mrg_card_top {
+  margin-top: -5%;
+}
+
+.mrg_card_left {
+  margin-left: 4%;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.cercle {
+  background-color: $purple;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  margin-left: -3%;
+  color: $white;
+  font-size: 0.8rem;
+}
+
+.fas {
+  color: $icon-grey;
+  font-size: 1.3rem;
+}
+
+.fas.fa-map-marker-alt {
+  position: absolute;
+  color: $black;
+  font-size: 1.1rem;
+  margin-left: -18%;
+  margin-top: -0.2%;
+}
+
+.img_container {
+  height: 70%;
+  background-size: 103%;
+  border-radius: 1.3rem 1.3rem 0 0;
+  background-position-x: -0.3rem;
+  background-position-y: -3.6rem;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  margin-bottom: 5%;
+
+  & .flex {
+    flex-direction: column;
+  }
+}
+
+.img_gout {
+  background-image: url(/images/restaurants/gout.jpg);
+}
+
+.img_note {
+  background-image: url(/images/restaurants/note.jpg);
+}
+
+.img_française {
+  background-image: url(/images/restaurants/française.jpg);
+}
+
+.img_delice {
+  background-image: url(/images/restaurants/delice.jpg);
+}
+
+
+
+.heart {
+  position: absolute;
+  font-size: 1.8rem;
+  right: 3rem;
+  top: 77%;
+}
+
+.filled {
+  opacity: 0;
+  fill: url(#MyGradient);
+}
+
+.heart:hover .filled {
+  opacity: 1;
+ z-index: 6;
+}
+
+
+svg {
+  cursor: pointer;
+  transition: 0.1s;
+  position: absolute;
+ 
+}
+
+.heart_menu {
+  position: absolute;
+  display: inline-block;
+right: -4rem !important;
+ top: 0;
+
+}
+.mrg_heart_menu {
+  right: -7rem !important;
+}
+
+h2 {
+  position: relative;
+}
+
+.logo {
+  animation: visible 3s ease-in forwards;
+  height: fit-content;
+  text-align: center;
+  padding: 4% 0%;
+
+  &_footer {
+    width: 25%;
+    height: 1.5rem;
+    color: $white;
+  }
+}
+
+.fs_largelogo {
+  font-size: $fs_largelogo;
+  font-weight: $fw_largebold;
+  color: $black;
+}
+.new {
+  position: absolute;
+  width: 23%;
+  height: 3rem;
+  background-color: $green;
+  border-radius: 0.2rem;
+  justify-content: center;
+ right: 2rem;
+  margin-top: 3.5%;
+  color: $dark-green;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.fs_bold {
+  font-weight: 500;
+}
+
+.white {
+  color: $white;
+}
+
+.ffm {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 4%;
+}
+
+.fs_footer_icon {
+  font-size: 1rem;
+}
+
+.footer_items {
+  flex-direction: row;
+  gap: 7%;
+  width: 60%;
+}
+
+.mrg_left_footer {
+  margin-left: -3.5%;
+}
+
+.img_menu {
+  overflow: hidden;
+  width: 100%;
+background-size: 100%;
+background-position-y: 15% ;
+background-repeat: no-repeat;
+height: 24rem;
+margin-bottom: auto;
+}
+
+.position_ {
+
+  &française {
+    background-position-y: unset !important;
+
+  }
+  &delice {
+    background-position-y: unset !important;
+
+  }
+  &gout {
+    background-position-y: unset !important;
+
+  }
+  &note {
+    background-position-y: unset !important;
+
+  }
+
+} 
+
+.mrg_img_menu {
+  margin-top: -26%;
+}
+.mrg_img_menu1 {
+  margin-top: -41% !important;
+}
+
+.fas.fa-arrow-left {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 1rem;
+  margin-top: 2%;
+  color: $black;
+}
+
+.menu {
+  position: relative !important;
+  border-radius: 2rem 2rem 0rem 0rem;
+  margin-top: -11.5rem;
+  z-index: 4;
+  padding-bottom: 25%;
+}
+
+.btn_menu {
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.btn_container {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8%;
+}
+
+.brd_bottom {
+  border-bottom: solid;
+  border-bottom-color: $green;
+  width: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.slidegreen {
+  width: 0%;
+  height: 100%;
+  background-color: $green;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nom {
+  margin-left: 4%;
+  margin-top: 4%;
+  width: 80%;
+  @include ellipsis;
+  display: flex;
+  flex-direction: column;
+}
+
+.span {
+  @include ellipsis;
+  display: block;
+}
+
+.visible {
+  height: 85%;
+  z-index: 12;
+  align-items: flex-end;
+  padding-bottom: 0.65rem;
+  margin-right: 1rem;
+  display: flex;
+}
+
+.prixbold {
+  font-weight: 500;
+}
+
+.fas.fa-check-circle {
+  visibility: hidden;
+  color: $white;
+  font-size: 1.5rem;
+}
+
+.pdg_top {
+  padding-top: 0.3rem;
+  display: block;
+  @include ellipsis;
+}
+
+.container_card {
+  animation: visible 3s ease-in forwards;
+  width: 100% !important;
+  height: fit-content;
+  background-color: $light-grey;
+}
+
+.img_menu_container {
+  position: relative;
+  width: 100% !important;
+  height: fit-content;
+  background-color: black !important;
+}
+.logo_container {
+  width: 100% !important;
+  height: fit-content;
+}
+
+.footer_container {
+  animation: visible 3s ease-in forwards;
+  width: 100%;
+  height: fit-content;
+  background-color: $dark-grey;
+}
+
+@keyframes slidetest {
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateZ(-180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes test {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-30%);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visiblespinner {
+  0% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+html,
+body {
+  z-index: 100;
+  background-color: $white;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.loading_spinner {
+  width: 4rem;
+  height: 4rem;
+  top: 50vh;
+  left: 40vw;
+  position: relative;
+}
+
+.loader_quart {
+  border-radius: 50%;
+  border: 0.5rem solid rgba(255, 255, 255, 0.4);
+  animation: visiblespinner 3s ease-in forwards;
+
+  &::after {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    bottom: -0.5rem;
+    right: -0.5rem;
+    border: 0.5rem solid rgba($light-grey, 0.4);
+    border-top-color: $black;
+    border-radius: 4rem;
+    animation: spin 1s linear infinite;
+  }
+
+}
+
+@media screen and (min-width: 517px) and (max-width: 599.5px) {
+  .card {
+    max-width: 30.5rem;
+  }
+  .index_card {
+    max-width: 30.5rem;
+  }
+  .card_container {
+    position: relative !important;
+  align-items: center !important;
+  justify-content: center !important;
+  }
+  .new {
+    max-width: 7.5rem;
+  }
+  .mrg_card_top {
+
+    margin-top: -4%;
+  }
+  .fonctionnement {
+    align-items: center !important;
+  }
+  }
+/*# sourceMappingURL=design.css.map */

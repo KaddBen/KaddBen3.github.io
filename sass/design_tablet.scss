@@ -1,0 +1,172 @@
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+
+.heart_menu {
+top: 0.5rem;
+  right: -10rem;
+}
+.card_container {
+        align-items: center !important;
+    }
+
+    .fonctionnement {
+        align-items: center !important;
+      }
+.footer_mrg_top {
+
+  margin-top: 1.4rem !important;
+}
+.loading_spinner {
+
+    left: 45vw;
+}
+.menu_card {
+ width: 70% !important;
+}
+.menu_card1 {
+ width: 70% !important;
+}
+.menu_card2 {
+ width: 70% !important;
+}
+.menu_card3 {
+ width: 70% !important;
+}
+
+.menu_card_provence {
+  width: 70% !important;
+}
+
+.menu_container {
+    align-items: center;
+}
+
+.footer {
+    width: 95%;
+    flex-direction: row !important;
+    gap: 1rem !important;
+&_items {
+
+   text-align: center;
+   margin-right: 1rem !important;
+}
+}
+
+
+.card {
+    position: relative;
+    width: 33.5rem !important;
+    height: 20rem !important;
+    margin-left: 1rem !important; 
+  }
+
+  a {
+
+    width: 33.5rem !important;
+  }
+
+
+  .fas.fa-arrow-left {
+top: 1.2rem;
+font-size: 2rem;
+  }
+  .mrg_card_left {
+    padding-bottom: 0.5rem !important;
+  }
+  .new {
+    right: 2rem;
+    width: 18%;
+   }
+
+   .fs_normal {
+
+    padding-bottom: 0rem;
+    margin-right: 1rem !important;
+ }
+}
+@media screen and (min-width: 800px) and (max-width: 800px) {
+    .card {
+
+        width: 33.5rem !important;
+        height: 20rem !important;
+    margin-left: 7rem !important;
+    }
+
+    .new {
+
+        left: -2%; 
+        width: 18%;
+       }
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
+
+
+    .card_container {
+            align-items: center;
+        }
+    
+    
+    .menu_card {
+     width: 60%;
+    }
+    .menu_card1 {
+     width: 60%;
+    }
+    .menu_card2 {
+     width: 60%;
+    }
+    .menu_card3 {
+     width: 60%;
+    }
+    
+    .menu_container {
+        align-items: center;
+    }
+    
+    .footer {
+    
+        width: 95%;
+        flex-direction: row !important;
+        gap: 1rem !important;
+    }
+
+    .reservation {
+
+        width: 87%;
+    }
+
+    .fonctionnement {
+      
+        align-items: center !important;
+       
+        & .flex {
+           width: 60% !important;
+        
+          }
+            
+        }
+
+  .card {
+
+    width: 100% !important;
+    height: 38vw !important;
+   
+  }
+
+ a {
+
+    width: 70%;
+ }
+
+ .fs_normal {
+
+    padding-bottom: 0rem;
+    margin-right: 3rem !important;
+ }
+
+ .new {
+
+  left: -2%; 
+  width: 18%;
+ }
+    }

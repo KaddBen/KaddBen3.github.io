@@ -1,0 +1,24 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "p3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaddBen/P3.git"
+  },
+  "author": "Kaddour Benkraouda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaddBen/P3/issues"
+  },
+  "homepage": "https://github.com/KaddBen/P3#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.0"
+  }
+}

@@ -1,5 +1,12 @@
 @import "./variables";
 
+@media screen and (min--moz-device-pixel-ratio:0) {
+  .pdg_top {
+    margin-top: unset !important;
+  }
+}
+  
+
 h1,
 h2,
 h3,
@@ -655,6 +662,7 @@ margin-bottom: auto;
 }
 
 .pdg_top {
+  margin-top: -1rem;
   padding-top: 0.3rem;
   display: block;
   @include ellipsis;
